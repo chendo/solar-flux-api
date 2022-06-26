@@ -59,7 +59,7 @@ end
 SolarFlux.init
 
 README = File.
-          readlines($0).
+          readlines(__FILE__).
           chunk { |line| line[0] == "#" }.
           first.last.map { |line| line.sub(/\A# ?/, '') }.join
 
