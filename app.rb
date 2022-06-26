@@ -8,14 +8,7 @@
 # Source: https://github.com/chendo/solar-flux-api
 # License: MIT
 
-require 'bundler/inline'
-
-gemfile do
-  source 'https://rubygems.org'
-  gem 'sinatra'
-  gem 'puma'
-  gem 'excon'
-end
+require 'bundler/setup'
 
 set :app_file, $0
 
