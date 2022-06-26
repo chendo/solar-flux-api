@@ -64,9 +64,13 @@ README = File.
           first.last.map { |line| line.sub(/\A# ?/, '') }.join
 
 get '/' do
+  response.headers['Content-Type'] = 'text/plain'
+  response.headers['Cache-Control'] = 'public, max-age=600'
   README
 end
 
 get '/solar-flux.json' do
+  response.headers['Content-Type'] = 'application/json'
+  response.headers['Cache-Control'] = 'public, max-age=60'
   JSON.dump(SolarFlux.cached_api_response)
 end
