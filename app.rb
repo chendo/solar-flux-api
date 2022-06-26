@@ -9,8 +9,7 @@
 # License: MIT
 
 require 'bundler/setup'
-
-set :app_file, $0
+Bundler.require
 
 class SolarFlux
   class << self
